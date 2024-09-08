@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial Black', sans-serif;
+    background-color: #000000;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #000000;
+    padding: 30px;
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px #000;
+    text-shadow: 0 0 15px #ffffff; 
+}
+
+nav {
+    margin: 20px 0;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 7px;
+    border-bottom: 2px solid #d32f2f;
+    border-top: 2px solid #d32f2f;
+    border-left: 2px solid #d32f2f;
+    border-right: 2px solid #d32f2f;
+    box-shadow: 20px 20px 60px #d32f2f18, -20px -20px 60px #d32f2f18;
+}
+
+nav a {
+    color: #d32f2f;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    color: #f0f0f0;
+    text-shadow: 0 0 5px #f0f0f0, 0 0 10px #f0f0f0;
+}
+
+main {
+    flex: 1;
+}
+
+section {
+    padding: 40px;
+    background-color: #000000;
+    border: 2px solid #d32f2f;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, rgb(255, 0, 0), rgb(43, 1, 1), rgb(94, 0, 0), rgb(255, 0, 0));
+    background-size: 400%;
+    z-index: -1;
+    animation: gradient 5s ease infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+section:hover::before {
+    opacity: 1;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+section:hover {
+    background-color: #000000;
+    border-color: #d32f2f;
+    box-shadow: 0px 8px 25px #d32f2f;
+}
+
+h2 {
+    color: #d32f2f;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+footer {
+    border-radius: 7px;
+    box-shadow: 20px 20px 60px #d32f2f18, -20px -20px 60px #d32f2f18;
+    background-color: #000000;
+    color: #d32f2f;
+    padding: 15px 0;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-align: center;
+}
