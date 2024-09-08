@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="css/loading.css">
+    <style>
+        body {
+            background-color: #000000;
+            transition: filter 1s ease-out;
+        }
+        .blurred {
+            filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal-loader">
+        <div class="terminal-header">
+            <div class="terminal-title">Status</div>
+            <div class="terminal-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+            </div>
+        </div>
+        <div class="text">Loading...</div>
+    </div>
+
+    <script>
+        function redirigir() {
+            setTimeout(function() {
+                document.body.classList.add('blurred');
+                
+                setTimeout(function() {
+                    window.location.href = "@.html";
+                }, 1000);
+            }, 10000);
+        }
+
+        window.onload = redirigir;
+    </script>
+</body>
+</html>

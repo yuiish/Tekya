@@ -1,0 +1,95 @@
+@keyframes parpadeoCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes escribirYBorrar {
+  0%,
+  10% {
+    width: 0;
+  }
+  45%,
+  55% {
+    width: 6.2em;
+  } 
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+.cargador-terminal {
+  border: 0.1em solid #000;
+  background-color: #000;
+  backdrop-filter: blur(3px);
+  color: #0f0;
+  
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  padding: 1.5em 1em;
+  width: 12em;
+  margin: 100px auto;
+  box-shadow: 0 4px 8px #000;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  backdrop-filter: blur(20px);
+  box-shadow: 20px 20px 60px rgba(179, 19, 19, 0.35), -20px -20px 60px rgba(179, 19, 19, 0.35);
+}
+
+.encabezado-terminal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5em;
+  background-color: #000;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 0 0.4em;
+  box-sizing: border-box;
+}
+
+.controles-terminal {
+  float: right;
+}
+
+.boton-control {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.4em;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.boton-control.cerrar {
+  background-color: #e33;
+}
+
+.boton-control.minimizar {
+  background-color: #ee0;
+}
+
+.boton-control.maximizar {
+  background-color: #0b0;
+}
+
+.titulo-terminal {
+  float: left;
+  line-height: 1.5em;
+  color: #eee;
+}
+
+.texto {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.2em solid #0f0;
+  animation: escribirYBorrar 4s steps(11) infinite,
+    parpadeoCursor 0.5s step-end infinite alternate;
+  margin-top: 1.5em;
+}
